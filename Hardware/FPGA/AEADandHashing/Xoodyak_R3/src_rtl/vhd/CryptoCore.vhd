@@ -190,35 +190,35 @@ begin
     ----------------------------------------------------------------------------
 
     -- little endian
-    key_s               <= reverse_byte(key);
-    bdi_s               <= reverse_byte(bdi);
-    bdi_valid_bytes_s   <= reverse_bit(bdi_valid_bytes);
-    bdi_pad_loc_s       <= reverse_bit(bdi_pad_loc);
-    key_ready           <= key_ready_s;
-    bdi_ready           <= bdi_ready_s;
-    bdo                 <= reverse_byte(bdo_s);
-    bdo_valid_bytes     <= reverse_bit(bdo_valid_bytes_s);
-    bdo_valid           <= bdo_valid_s;
-    bdo_type            <= bdo_type_s;
-    end_of_block        <= end_of_block_s;
-    msg_auth            <= msg_auth_s;
-    msg_auth_valid      <= msg_auth_valid_s;
-
-    -- big endian
-
-    -- key_s               <= key;
-    -- bdi_s               <= bdi;
-    -- bdi_valid_bytes_s   <= bdi_valid_bytes;
-    -- bdi_pad_loc_s       <= bdi_pad_loc;
+    -- key_s               <= reverse_byte(key);
+    -- bdi_s               <= reverse_byte(bdi);
+    -- bdi_valid_bytes_s   <= reverse_bit(bdi_valid_bytes);
+    -- bdi_pad_loc_s       <= reverse_bit(bdi_pad_loc);
     -- key_ready           <= key_ready_s;
     -- bdi_ready           <= bdi_ready_s;
-    -- bdo                 <= bdo_s;
-    -- bdo_valid_bytes     <= bdo_valid_bytes_s;
+    -- bdo                 <= reverse_byte(bdo_s);
+    -- bdo_valid_bytes     <= reverse_bit(bdo_valid_bytes_s);
     -- bdo_valid           <= bdo_valid_s;
     -- bdo_type            <= bdo_type_s;
     -- end_of_block        <= end_of_block_s;
     -- msg_auth            <= msg_auth_s;
     -- msg_auth_valid      <= msg_auth_valid_s;
+
+    -- big endian
+
+    key_s               <= key;
+    bdi_s               <= bdi;
+    bdi_valid_bytes_s   <= bdi_valid_bytes;
+    bdi_pad_loc_s       <= bdi_pad_loc;
+    key_ready           <= key_ready_s;
+    bdi_ready           <= bdi_ready_s;
+    bdo                 <= bdo_s;
+    bdo_valid_bytes     <= bdo_valid_bytes_s;
+    bdo_valid           <= bdo_valid_s;
+    bdo_type            <= bdo_type_s;
+    end_of_block        <= end_of_block_s;
+    msg_auth            <= msg_auth_s;
+    msg_auth_valid      <= msg_auth_valid_s;
 
     -- Utility signal: Indicates whether the input word is fully filled or not.
     -- If '1', word is only partially filled.

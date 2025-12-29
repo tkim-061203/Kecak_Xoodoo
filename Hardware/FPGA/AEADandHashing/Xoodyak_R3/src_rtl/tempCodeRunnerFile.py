@@ -1,0 +1,1 @@
+print("Iteration: ", i, "Output: ", A)
